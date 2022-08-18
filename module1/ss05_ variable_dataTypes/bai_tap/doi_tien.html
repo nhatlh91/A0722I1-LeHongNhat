@@ -5,6 +5,7 @@
     <title>Bài tập viết ứng dụng đổi tiền</title>
 </head>
 <body>
+<form method="post" action="">
     <table>
         <tr>
             <th>Amount</th>
@@ -14,26 +15,43 @@
         </tr>
         <tr>
             <td>
-                <input type="number" placeholder="Enter the amount" id=inputbox>
+                <input type="number" placeholder="Enter the amount" id="inputAmount">
             </td>
             <td>
-                <select id="inputcurrency">
-                        <option name="inputCurrency" value="1">USD</option>
-                        <option name="inputCurrency" value="2">VND</option>
+                <select id="from">
+                        <option value="usd">USD</option>
+                        <option value="vnd">VND</option>
                 </select>
             </td>
             <td>
-                <select id=tocurrency">
-                        <option name="toCurrency" value="1">USD</option>
-                        <option name="toCurrency" value="2">VND</option>
+                <select id="to">
+                        <option value="usd">USD</option>
+                        <option value="vnd">VND</option>
                 </select>
             </td>
             <td>
-                <button onclick="myFunction()">Convert</button>
+                <button type="button" onclick="exchange()" id="but">Convert</button>
             </td>
         </tr>
     </table>
-    <p id="result"> Giá trị quy đổi là </p>
-<script src="doi_tien.js"></script>
+</form>
+    <p>Bạn đang chuyển <span id="inAmount"> </span> <span id="fr"></span> sang <span id="result"></span> <span id="2"></span> </p>
+<script>
+    function exchange(){
+        let nhap=document.getElementById("inputAmount").value;
+        let from=document.getElementById("from").value;
+        let to=document.getElementById("to").value;
+        document.getElementById("inAmount").innerHTML = nhap;
+        document.getElementById("fr").innerHTML = from;
+        document.getElementById("2").innerHTML = to;
+        if (from==to){
+            document.getElementById("result").innerHTML = nhap;
+        }else if (from =='vnd'){
+            document.getElementById("result").innerHTML = nhap/23300;
+        }else if (from =='usd'){
+            document.getElementById("result").innerHTML = nhap*23300;
+        }
+    }
+</script>
 </body>
 </html>
