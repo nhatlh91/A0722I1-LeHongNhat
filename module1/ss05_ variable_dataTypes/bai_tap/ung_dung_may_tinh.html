@@ -6,7 +6,6 @@
 </head>
 <body>
 <h1>Calculator</h1>
-<form>
     <table>
         <tr>
             <td colspan="2">
@@ -31,31 +30,32 @@
             </td>
         </tr>
     </table>
-</form>
+<p>The operating result is: <span id="result"></span></p>
 <script>
    function add(){
         let in1 = parseFloat(document.getElementById('input1').value);
         let in2 = parseFloat(document.getElementById('input2').value);
         let kq=in1+in2;
-        alert ('Ket qua cua phep tinh la '+kq);
+        document.getElementById('result').innerHTML = (kq);
+        // alert ('Ket qua cua phep tinh la '+kq);
     }
    function sub(){
        let in1 = (document.getElementById('input1').value);
        let in2 = (document.getElementById('input2').value);
        let kq=in1-in2;
-       alert ('Ket qua cua phep tinh la: '+kq);
+       document.getElementById('result').innerHTML = (kq);
    }
    function mul(){
        let in1 = (document.getElementById('input1').value);
        let in2 = (document.getElementById('input2').value);
        let kq=in1*in2;
-       alert ('Ket qua cua phep tinh la: '+kq);
+       document.getElementById('result').innerHTML = (kq);
    }
    function div(){
        let in1 = (document.getElementById('input1').value);
        let in2 = (document.getElementById('input2').value);
        let kq=in1/in2;
-       alert ('Ket qua cua phep tinh la: '+kq);
+       document.getElementById('result').innerHTML = (kq);
    }
 </script>
 </body>
