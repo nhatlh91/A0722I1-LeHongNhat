@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập viết ứng dụng đổi tiền</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From currency</th>
+            <th>To currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" placeholder="Enter the amount" id=inputbox>
+            </td>
+            <td>
+                <select id="inputcurrency">
+                        <option name="inputCurrency" value="1">USD</option>
+                        <option name="inputCurrency" value="2">VND</option>
+                </select>
+            </td>
+            <td>
+                <select id=tocurrency">
+                        <option name="toCurrency" value="1">USD</option>
+                        <option name="toCurrency" value="2">VND</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="myFunction()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="result"> Giá trị quy đổi là </p>
+<script src="doi_tien.js"></script>
+</body>
+</html>
